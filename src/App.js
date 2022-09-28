@@ -1,25 +1,16 @@
-import logo from './logo.svg';
+// db32f282ca5e4aee8ec08d58e8801c4a
 import './App.css';
+import React, { Component } from 'react'
+import Navbar from './component/Navbar';
+import News from './component/News';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {  
+  render() {
+    return (
+      <div>
+        <Navbar/>
+        <News/>
+      </div>
+    )
+  }
 }
-
-export default App;
