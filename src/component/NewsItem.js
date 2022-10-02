@@ -8,7 +8,7 @@ const NewsItem =(props)=> {
             {/* <div className="card" style={{width: "18rem"}}> */}
             <div className="card" >
               <div style={{display:"flex" , justifyContent:"flex-end",position:"absolute",right:"0"}}>
-            <span className=" badge rounded-pill bg-danger" >{source}</span>
+            <span className=" badge 6tgb rounded-pill bg-danger" >{source}</span>
             </div>
                 <img src={!imgUrl?"https://images.moneycontrol.com/static-mcnews/2022/03/fandosensexniftyderivative-770x433.jpg":imgUrl}className="card-img-top" alt="..."/>
                 <div className="card-body">

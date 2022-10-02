@@ -32,6 +32,7 @@ const News=(props)=> {
 
   useEffect(() => {
     updateNews();
+    //eslint-disable-next-line
   }, []);
 
 
@@ -47,7 +48,10 @@ const News=(props)=> {
     // })
     // this.updateNews();
   // }
- const handelPrevClick = async () => {
+
+
+
+//  const handelPrevClick = async () => {
     // console.log("prev")
     // let url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=db32f282ca5e4aee8ec08d58e8801c4a&page=${this.state.page-1}&pageSize=${props.pageSize}`;
     // this.setState({loading:true})
@@ -61,8 +65,12 @@ const News=(props)=> {
     //   })
     setPage(page-1);
     updateNews();
-  };
-const  handelNextClick = async () => {
+  // };
+
+
+
+
+// const  handelNextClick = async () => {
     //   console.log("next")
     //   if(!(this.state.page+1>Math.ceil( this.state.totalResults/props.pageSize))){
 
@@ -78,11 +86,12 @@ const  handelNextClick = async () => {
     // }
     setPage(page+1);
     updateNews();
-  };
+  // };
   const fetchMoreData =async() => {
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=db32f282ca5e4aee8ec08d58e8801c4a&page=${page+1}&pageSize=${props.pageSize}`;
     setPage(page+1);
    
-   const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=db32f282ca5e4aee8ec08d58e8801c4a&page=${this.state.page}&pageSize=${props.pageSize}`;
+ 
   //  this.setState({ loading: true });
    let data = await fetch(url);
    let parsedData = await data.json();
@@ -97,7 +106,7 @@ const  handelNextClick = async () => {
 
     return (
       <div className="container my-3 ">
-        <h2 className="text-center">
+        <h2 className=" text-center" style={{marginTop :'90px'}}>
           NewsApp - Top {capitalizeFirstLetter(props.category)}{" "}
           HeadLines{" "}
         </h2>
