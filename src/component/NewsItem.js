@@ -3,6 +3,7 @@ import React from 'react'
 const NewsItem =(props)=> {
     
     let {title,description,imgUrl,newsUrl,date,author,source}=props;
+    // let {description,imgUrl,newsUrl,date,author,source}=props;
     return ( 
       <div className='my-3'>
             {/* <div className="card" style={{width: "18rem"}}> */}
